@@ -29,7 +29,7 @@ class Customer:
 
     def update_money_and_location(self,
                                   total_cost: float,
-                                  new_location: str) -> None:
+                                  new_location: list) -> None:
         self.money -= total_cost
         self.location = new_location
 
@@ -37,10 +37,10 @@ class Customer:
                       shop_name: str,
                       purchased_products: dict,
                       total_cost: float) -> None:
-        print(f"\nDate: {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}")
+        print(f"\nDate: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
         print(f"Thanks, {self.name}, for your purchase at {shop_name}!")
         print("You have bought:")
         for product, (quantity, cost) in purchased_products.items():
-            print(f"{quantity} {product}(s) for {cost} dollars")
+            print(f" {quantity} {product}s for {cost} dollars")
         print(f"Total cost in {total_cost: .2f} dollars")
         print("See you again!")

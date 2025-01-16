@@ -1,5 +1,5 @@
 class Shop:
-    def __init__(self, name: str, location: str, products: str) -> None:
+    def __init__(self, name: str, location: str, products: dict) -> None:
         self.name = name
         self.location = location
         self.products = products

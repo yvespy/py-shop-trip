@@ -41,7 +41,7 @@ def shop_trip() -> None:
 
         for shop in shop_objects:
             distance_to_shop = customer.calculate_distance(shop.location)
-            distance_to_home = customer.calculate_distance(customer.location)
+            distance_to_home = customer.calculate_distance(shop.location)
             fuel_cost_to_shop = customer.car.calculate_fuel_cost(
                 distance_to_shop, fuel_price)
             fuel_cost_to_home = customer.car.calculate_fuel_cost(
