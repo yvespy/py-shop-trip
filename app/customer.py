@@ -41,6 +41,6 @@ class Customer:
         print(f"Thanks, {self.name}, for your purchase at {shop_name}!")
         print("You have bought:")
         for product, (quantity, cost) in purchased_products.items():
-            print(f" {quantity} {product}(s) for {cost} dollars")
+            print(f"{quantity} {product}(s) for {cost} dollars")
         print(f"Total cost in {total_cost: .2f} dollars")
         print("See you again!")
