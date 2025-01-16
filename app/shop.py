@@ -112,7 +112,7 @@ def make_purchase(customer: Customer, shop: Shop) -> None:
 
     for product, count in customer.product_cart.items():
         price = count * shop.products[product]
-        if price.is_integer():
+        if isinstance(price, float) and price.is_integer():
             price = int(price)
         print(
             f"{count} {product}s for {price} dollars"
